@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+@font-face {
+    font-family: hdtitle;
+    src: url('font/SourceHanSansTC-Light.otf'); 
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+.menu {
+    width: 240px;
+	height: 100%;
+	position: absolute;
+	background: #DDD;
+	left: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.menu-icon {
+    padding: 10px 20px;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 4px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1;
+}
+#hbgtog {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    z-index: 100;
+}
+#menuToggle { 
+    display: none; 
+}
+#menuToggle:checked ~ .menu { 
+    position: fixed; left: 0; 
+}
+nav { 
+    width: 100%; 
+    text-align: center; 
+    position: fixed;
+    z-index: 0;
+}
+nav a { 
+    display: block; 
+	padding: 30px 0;
+	border-bottom: 1px solid #EEE;
+}
+nav a:hover { 
+    background: #00AAAA; 
+    color: #FFF; 
+}
+nav li:last-child a { 
+    border-bottom: none; 
+}
+a { 
+    text-decoration: none; color: #00AAAA; 
+}
+li { 
+    list-style-type: none; 
+}
+header{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    position: fixed;
+    z-index: -1;
+}
+#hdtitle{
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    font-family: hdtitle;
+}
+
+/*RWD*/
+
+@media only screen and (max-width: 768px) {
+    #hbgtog {
+        height: 100px;
+        width: auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #hbgtog {
+        height: 60px;
+        width: auto;
+    }
+}
+
+/*RWD*/
